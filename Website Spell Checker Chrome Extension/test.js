@@ -1,31 +1,31 @@
-//Website spell checker v0.0.1 chrome extension
+//Website spell checker chrome extension
 //let's do this
-var position = document.documentElement.innerHTML.indexOf("and");
+var position = true;
+var fullArray = [];
+var htmlText = getText();
 
-function getText(){
-    return document.body.innerText
-}
-
-function makeMistakeArray(){
-	var fso = new ActiveXObject("Scripting.FileSystemObject");
-	var mistakes = fso.OpenTextFile("C:\Users\Administrator\Desktop\extensionizr_custom1398805745887\ext\mistakes.txt");
-	var mistakesList = mistakes.Read(1000);
-	var mistakesArray = mistakesList.split("->");
-	for (i = 0; i != null; i++) {
-		var mistakesString = mistakesArray[i].toString();
-	}
-}
-
-/*for (i = 0; position; i++) {
-	if (somethingArray[i] === "and") {
-		
-	}
+/*function grabUrl(){
+	var url = prompt("Enter the URL here.", "Ex. http://www.psd401.net/");
+	return url;
 }*/
 
-
-/*
- 
-while (position) {
-	if it contains something, then do this
-	
+function getText(){
+    var xmlHttp = null;
+	var url = prompt("Enter the URL here.", "Ex. http://www.psd401.net/");
+	if (url != null) {
+		xmlHttp = new XMLHttpRequest();
+		xmlHttp.open( "GET", url, false );
+		//xmlHttp.send( null );
+		return xmlHttp.responseText;
+	} else {
+		prompt("You need to enter a valid URL. Ensure that there aren't any spaces.");
+		return "You didn't enter a valid URL.";
+	}
 }
+
+
+alert(htmlText);
+/*for (i = 0; position; i++) {
+	
+}*/ 
+
