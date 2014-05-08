@@ -3,9 +3,11 @@
 
   "name": "Website Spell Checker",
   "description": "Checks a website for spelling errors.",
-  "version": "0.0.1",
+  "version": "0.0.2",
 
   "permissions": [
+	"tabs",
+	"activeTab"
   ],
   "browser_action": {
     "default_icon": "icon128.png",
