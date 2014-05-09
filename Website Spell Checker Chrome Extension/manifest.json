@@ -5,12 +5,20 @@
   "description": "Checks a website for spelling errors.",
   "version": "0.0.2",
 
+  "content_scripts": [
+    {             
+      "matches": ["http://www.google.com/*"],      
+      "js": ["test.js", "formatText.js"]
+    }
+  ],
+
   "permissions": [
 	"tabs",
 	"activeTab"
   ],
+
   "browser_action": {
-    "default_icon": "icon128.png",
-    "default_popup": "popup.html"
+      "default_icon": "icon128.png",
+      "default_popup": "popup.html"
   }
 }
