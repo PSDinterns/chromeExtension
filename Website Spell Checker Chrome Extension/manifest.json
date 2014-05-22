@@ -8,7 +8,7 @@
   "content_scripts": [
     {             
       "matches": ["http://www.google.com/*"],      
-      "js": ["test.js", "formatText.js"]
+      "js": ["jQuery.js", "jquery.highlight-4.js", "test.js" ]
     }
   ],
 
